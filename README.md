@@ -81,3 +81,107 @@ A NextJob é uma plataforma que utiliza IA para:
 
 _________________________________________
 
+## 2. Tecnologias Utilizadas
+
+- **Linguagem:** Java 21
+  
+- **Framework:** Spring Boot 3.5.7
+  
+- **Módulos principais:**
+  
+  - spring-boot-starter-web
+    
+  - spring-boot-starter-thymeleaf
+    
+  - spring-boot-starter-data-jpa
+    
+  - spring-boot-starter-validation
+    
+  - spring-boot-starter-security
+    
+  - spring-boot-starter-oauth2-client
+    
+  - spring-boot-starter-amqp (RabbitMQ)
+    
+  - spring-boot-starter-cache
+    
+  - **spring-ai-starter-model-openai** (Spring AI)
+    
+- **Banco de dados:**
+  
+  - PostgreSQL (produção)
+    
+  - H2 (perfil `dev`)
+    
+- **Mensageria:** RabbitMQ
+
+- **Build:** Gradle
+  
+- **Autenticação:** OAuth2 (GitHub)
+  
+- **Deploy em nuvem:** TODO: _descrever o provedor e links (ex: Render, Railway, etc.)_
+
+---
+
+## 3. Arquitetura (Visão Geral)
+
+Camadas principais:
+
+- `controller`  
+  Ex.: `CurriculoController`, `PlanoController`, `AnaliseController`, `PerfilController`, `AiController`.
+- `service`  
+  Contém a regra de negócio e orquestra chamadas à IA, filas e repositórios.
+- `repository`  
+  Interfaces que estendem `JpaRepository` para acesso a dados.
+- `model` / `dto`  
+  Entidades JPA e DTOs com métodos de acesso e validações.
+- `config`  
+  Configurações de:
+  - Cache (`CacheConfiguration`)
+  - Internacionalização (`InternationalizationConfiguration`)
+  - Segurança (`SecurityConfiguration`, `OAuth2Configuration`)
+  - RabbitMQ (`RabbitMQConfiguration`)
+
+---
+
+## 4. Configuração de Ambiente
+
+### 4.1. Pré-requisitos
+
+- JDK 21
+- Gradle Wrapper (já incluso no projeto)
+- Docker (opcional, para subir PostgreSQL e RabbitMQ rapidamente)
+- Conta no GitHub (para OAuth)
+- Conta na Groq (para API Key de IA)
+
+### 4.2. Variáveis de Ambiente (`.env`)
+
+O projeto usa um arquivo `.env` baseado em `.env.example`:
+
+```env
+# Database
+SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/nextjob
+SPRING_DATASOURCE_USERNAME=nextjob_user
+SPRING_DATASOURCE_PASSWORD=nextjob_pass
+
+# Groq AI
+GROQ_API_KEY=your-groq-api-key
+GROQ_MODEL=llama-3.3-70b-versatile
+
+# RabbitMQ
+RABBITMQ_HOST=localhost
+RABBITMQ_PORT=5672
+RABBITMQ_USERNAME=guest
+RABBITMQ_PASSWORD=guest
+
+# GitHub OAuth2
+GITHUB_CLIENT_ID=your-github-client-id
+GITHUB_CLIENT_SECRET=your-github-client-secret
+GITHUB_CALLBACK_URL=http://localhost:8080/login/oauth2/code/github
+
+# JWT (se aplicável)
+JWT_SECRET=your-jwt-secret
+
+# Server
+PORT=8080
+```
