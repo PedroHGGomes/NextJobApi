@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: 'postgres:16-alpine'
+    container_name: nextjob-postgres
+    environment:
+      - 'POSTGRES_DB=nextjob'
+      - 'POSTGRES_USER=nextjob_user'
+      - 'POSTGRES_PASSWORD=nextjob_pass'
+    ports:
+      - '5432:5432'
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - nextjob-network
+
+volumes:
+  postgres_data:
+
+networks:
+  nextjob-network:
+    driver: bridge
