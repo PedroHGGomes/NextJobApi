@@ -184,24 +184,40 @@ ____________________________
 
 ## ENDPOINTS
 
+
 Currículos
+
 GET    /api/curriculos
+
 POST   /api/curriculos
+
 PUT    /api/curriculos/{id}
+
 DELETE /api/curriculos/{id}
 
+
 Planos
+
 GET    /api/planos
+
 POST   /api/planos
+
 DELETE /api/planos/{id}
 
+
 Análises (RabbitMQ)
+
 POST   /api/analises/curriculo/{id}
+
 GET    /api/analises/curriculo/{id}
+
 GET    /api/analises/curriculo/{id}/status
 
+
 IA (Spring AI + Groq)
+
 GET /api/ai/teste?mensagem=...
+
 
 ____________________________
 
