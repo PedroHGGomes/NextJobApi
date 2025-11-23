@@ -81,7 +81,7 @@ A NextJob é uma plataforma que utiliza IA para:
 
 _________________________________________
 
-## 2. Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **Linguagem:** Java 21
   
@@ -119,11 +119,11 @@ _________________________________________
   
 - **Autenticação:** OAuth2 (GitHub)
   
-- **Deploy em nuvem:** TODO: _descrever o provedor e links (ex: Render, Railway, etc.)_
+- **Deploy em nuvem:** Render
 
 ---
 
-## 3. Arquitetura (Visão Geral)
+## Arquitetura (Visão Geral)
 
 Camadas principais:
 
@@ -144,28 +144,28 @@ Camadas principais:
 
 ---
 
-## 4. Configuração de Ambiente
+## Configuração de Ambiente
 
-### 4.1. Pré-requisitos
+### Pré-requisitos
 
 - JDK 21
-- Gradle Wrapper (já incluso no projeto)
-- Docker (opcional, para subir PostgreSQL e RabbitMQ rapidamente)
+- Gradle Wrapper 
+- Docker
 - Conta no GitHub (para OAuth)
 - Conta na Groq (para API Key de IA)
 
-### 4.2. Variáveis de Ambiente (`.env`)
+### Variáveis de Ambiente (`.env`)
 
 O projeto usa um arquivo `.env` baseado em `.env.example`:
 
 ```env
 # Database
-SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/nextjob
-SPRING_DATASOURCE_USERNAME=nextjob_user
-SPRING_DATASOURCE_PASSWORD=nextjob_pass
+SPRING_DATASOURCE_URL=jdbc:postgresql://dpg-d4hp1t4hg0os738j7iu0-a.oregon-postgres.render.com:5432/exemplo_nextjob
+SPRING_DATASOURCE_USERNAME=exemplo_nextjob_user
+SPRING_DATASOURCE_PASSWORD=Mo6iC3E7Nl5KXmHXVbDJdcLkGwbnFtGn
 
 # Groq AI
-GROQ_API_KEY=your-groq-api-key
+GROQ_API_KEY= <API KEY QUE O GROQ FAZ>
 GROQ_MODEL=llama-3.3-70b-versatile
 
 # RabbitMQ
@@ -175,13 +175,26 @@ RABBITMQ_USERNAME=guest
 RABBITMQ_PASSWORD=guest
 
 # GitHub OAuth2
-GITHUB_CLIENT_ID=your-github-client-id
-GITHUB_CLIENT_SECRET=your-github-client-secret
-GITHUB_CALLBACK_URL=http://localhost:8080/login/oauth2/code/github
+GITHUB_CLIENT_ID= Ov23likgBhFvzNiRyw8s
+GITHUB_CLIENT_SECRET= GITHUB SECRET
+GITHUB_CALLBACK_URL=[[http://localhost:8080/login/oauth2/code/github](https://nextjobapi-r8bl.onrender.com)](https://nextjobapi-r8bl.onrender.com/login/oauth2/code/github)
 
-# JWT (se aplicável)
-JWT_SECRET=your-jwt-secret
-
-# Server
-PORT=8080
 ```
+
+____________________________
+
+## RENDER
+
+Link para o site realizado no render - https://nextjobapi-r8bl.onrender.com
+
+____________________________
+
+## YOUTUBE
+
+Link para o vídeo do youtube - https://youtu.be/epmhdH0h-oY
+
+_____________________________
+
+## PITCH
+
+Link para o video PITCH do youtube - https://youtu.be/6HzHTpK_r9A
