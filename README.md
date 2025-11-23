@@ -180,12 +180,41 @@ GITHUB_CLIENT_SECRET= GITHUB SECRET
 GITHUB_CALLBACK_URL=[[http://localhost:8080/login/oauth2/code/github](https://nextjobapi-r8bl.onrender.com)](https://nextjobapi-r8bl.onrender.com/login/oauth2/code/github)
 
 ```
+____________________________
+
+## ENDPOINTS
+
+Currículos
+GET    /api/curriculos
+POST   /api/curriculos
+PUT    /api/curriculos/{id}
+DELETE /api/curriculos/{id}
+
+Planos
+GET    /api/planos
+POST   /api/planos
+DELETE /api/planos/{id}
+
+Análises (RabbitMQ)
+POST   /api/analises/curriculo/{id}
+GET    /api/analises/curriculo/{id}
+GET    /api/analises/curriculo/{id}/status
+
+IA (Spring AI + Groq)
+GET /api/ai/teste?mensagem=...
 
 ____________________________
 
 ## RENDER
 
 Link para o site realizado no render - https://nextjobapi-r8bl.onrender.com
+
+____________________________
+
+## H2
+
+
+Link para acesso do site com o H2 - http://localhost:<PORTA>/h2-console
 
 ____________________________
 
@@ -198,3 +227,6 @@ _____________________________
 ## PITCH
 
 Link para o video PITCH do youtube - https://youtu.be/6HzHTpK_r9A
+
+_____________________________
+
