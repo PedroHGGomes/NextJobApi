@@ -184,21 +184,20 @@ ____________________________
 
 ## RODANDO O PROJETO
 
-1. Clone o repositório
+--
+Clone o repositório<br>
 git clone (https://github.com/PedroHGGomes/NextJobApi.git)<br>
 cd NextJobApi-main<br>
 
-
-3. Configure o arquivo .env
-
+--
+Configure o arquivo .env<br>
 Baseado no .env.example.
 
-
-
-4. Rodar com Docker (Utilizado para o render)<br>
+--
+Rodar com Docker (Utilizado para o render)<br>
 docker compose up<br>
 
-
+--
 5. Rodar localmente<br>
 ./gradlew bootRun
 
