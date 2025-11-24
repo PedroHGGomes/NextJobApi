@@ -198,11 +198,11 @@ Rodar com Docker (Utilizado para o render)<br>
 docker compose up<br>
 
 --
-5. Rodar localmente<br>
+Rodar localmente<br>
 ./gradlew bootRun
 
 
-
+--
 A aplicação subirá em:
 
 👉 http://localhost:<PORTA>
