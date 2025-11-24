@@ -182,6 +182,29 @@ GITHUB_CALLBACK_URL=[[http://localhost:8080/login/oauth2/code/github](https://ne
 ```
 ____________________________
 
+## RODANDO O PROJETO
+
+1. Clone o repositório
+   
+git clone [<URL_DO_REPO>](https://github.com/PedroHGGomes/NextJobApi.git)<br>
+cd NextJobApi-main<br>
+
+3. Configure o arquivo .env
+<br>
+Baseado no .env.example.
+<br>
+3. Rodar com Docker (Utilizado para o render)<br>
+docker compose up<br>
+
+4. Rodar localmente<br>
+./gradlew bootRun
+
+
+A aplicação subirá em:
+
+👉 http://localhost:<PORTA>
+____________________________
+
 ## ENDPOINTS
 
 --
