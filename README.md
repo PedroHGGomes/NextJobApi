@@ -165,7 +165,7 @@ SPRING_DATASOURCE_USERNAME=exemplo_nextjob_user
 SPRING_DATASOURCE_PASSWORD=Mo6iC3E7Nl5KXmHXVbDJdcLkGwbnFtGn
 
 # Groq AI
-GROQ_API_KEY= <API KEY QUE O GROQ FAZ>
+GROQ_API_KEY= 	gsk_...FlXq
 GROQ_MODEL=llama-3.3-70b-versatile
 
 # RabbitMQ
@@ -176,8 +176,8 @@ RABBITMQ_PASSWORD=guest
 
 # GitHub OAuth2
 GITHUB_CLIENT_ID= Ov23likgBhFvzNiRyw8s
-GITHUB_CLIENT_SECRET= GITHUB SECRET
-GITHUB_CALLBACK_URL=[[http://localhost:8080/login/oauth2/code/github](https://nextjobapi-r8bl.onrender.com)](https://nextjobapi-r8bl.onrender.com/login/oauth2/code/github)
+GITHUB_CLIENT_SECRET= *****c175ba30
+GITHUB_CALLBACK_URL= https://nextjobapi-r8bl.onrender.com/login/oauth2/code/github
 
 ```
 ____________________________
@@ -186,19 +186,21 @@ ____________________________
 
 1. Clone o repositório
    
-git clone [<URL_DO_REPO>](https://github.com/PedroHGGomes/NextJobApi.git)<br>
+git clone (https://github.com/PedroHGGomes/NextJobApi.git)<br>
 cd NextJobApi-main<br>
-
+--
 3. Configure o arquivo .env
-<br>
+--
 Baseado no .env.example.
 <br>
-3. Rodar com Docker (Utilizado para o render)<br>
+--
+4. Rodar com Docker (Utilizado para o render)<br>
 docker compose up<br>
-
-4. Rodar localmente<br>
+--
+--
+5. Rodar localmente<br>
 ./gradlew bootRun
-
+--
 
 A aplicação subirá em:
 
